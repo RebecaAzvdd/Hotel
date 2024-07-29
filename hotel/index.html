@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="header_img">
+            <img src="assets/logo.jpg" alt="Imagem do hotel">
+        </div>
+    </div>
+    <div class="main_content">
+        <div class="container_content">
+            <div class="container_title">
+                <p>Sinta o conforto<br>acolhedor de nossas<br>hospedagens</p>
+            </div>
+            <div class="container_description">
+                <p>Hospede-se nos hotéis com quartos a partir de R$ 100,00.</p>
+            </div>
+            <div class="container_button">
+                <button class="btn btn-primary">SAIBA MAIS</button>
+            </div>
+        </div>
+        <div class="container_img">
+            <img src="assets/hotel.jpg" alt="Imagem do hotel">
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div id="alert-container" class="container">
+            <p>Reserva realizada com sucesso</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section_title">
+            <p>POR QUE SE HOSPEDAR EM NOSSOS HOTÉIS?</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 section_option">
+                <div class="section_icon">
+                    <img src="assets/coffe.png" alt="Café da manhã">
+                </div>
+                <div class="option_title">
+                    <p>Delicioso café da manhã</p>
+                </div>
+                <div class="option_description">
+                    <p>Incluso em todas as diárias</p>
+                </div>
+            </div>
+            <div class="col-md-4 section_option">
+                <div class="section_icon">
+                    <img src="assets/localizacao.png" alt="Localização">
+                </div>
+                <div class="option_title">
+                    <p>Fácil acesso</p>
+                </div>
+                <div class="option_description">
+                    <p>Perto dos principais pontos turísticos</p>
+                </div>
+            </div>
+        </div>
+        <div class="container_options">
+            <div class="title_option text-center">
+                <p>NOSSOS QUARTOS</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 box">
+                    <div class="box_img">
+                        <img src="assets/suiteSolteiro.jpg" alt="Suíte Solteiro">
+                    </div>
+                    <div class="box_description">
+                        <p>Suíte Solteiro</p>
+                    </div>
+                </div>
+                <div class="col-md-4 box">
+                    <div class="box_img">
+                        <img src="assets/suiteCasal.jpg" alt="Suíte Casal">
+                    </div>
+                    <div class="box_description">
+                        <p>Suíte Casal</p>
+                    </div>
+                </div>
+                <div class="col-md-4 box">
+                    <div class="box_img">
+                        <img src="assets/suiteMaster.jpeg" alt="Suíte Master">
+                    </div>
+                    <div class="box_description">
+                        <p>Suíte Master</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container_reserva">
+            <div class="reserva_inner">
+                <div class="reserva_info">
+                    <div class="title">
+                        <p>FAÇA SUA RESERVA</p>
+                    </div>
+                    <div class="description">
+                        <p>Entre em contato conosco<br>informando as datas desejadas.<br>Lhe retornaremos informando a<br>disponibilidade e repassando<br>detalhes da reserva.</p>
+                    </div>
+                </div>
+                <div class="reserva_form">
+                    <form  id="reservation-form">
+                        <div class="form-row">
+                            <div class="col-md-6 input_options">
+                                <label for="name">Nome</label>
+                                <input type="text" id="name" class="form-control" placeholder="Escreva seu nome:">
+                            </div>
+                            <div class="col-md-6 input_options">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" class="form-control" placeholder="Escreva o seu email:">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 input_options">
+                                <label for="check-in">Data de entrada</label>
+                                <input type="date" id="check-in" class="form-control">
+                            </div>
+                            <div class="col-md-6 input_options">
+                                <label for="check-out">Data de Saída</label>
+                                <input type="date" id="check-out" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row reserva_fields">
+                            <div class="col-md-6 input_options">
+                                <label for="observations">Observações</label>
+                                <textarea id="observations" class="form-control" placeholder="Escreva suas Observações"></textarea>
+                            </div>
+                            <div class="col-md-6 mini_input">
+                                <div class="input-group">
+                                    <label for="adults">Adultos</label>
+                                    <input type="number" id="adults" class="form-control number_input">
+                                </div>
+                                <div class="input-group">
+                                    <label for="children">Crianças</label>
+                                    <input type="number" id="children" class="form-control number_input">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
