@@ -57,15 +57,18 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Show Success Message
-        const successAlert = document.createElement('div');
-        successAlert.className = 'alert alert-success show';
-        successAlert.textContent = 'Sua reserva foi enviada com sucesso!';
-        alertContainer.appendChild(successAlert);
+        const reservation = {
+            name: name,
+            email: email,
+            checkIn: document.getElementById('check-in').value,
+            checkOut: document.getElementById('check-out').value,
+            observations: document.getElementById('observations').value,
+            adults: document.getElementById('adults').value,
+            children: document.getElementById('children').value
+        };
 
-        // Trigger animation
-        setTimeout(() => {
-            successAlert.classList.add('active');
-        }, 100); // Delay to allow CSS transition to work
+        localStorage.setItem('reservation', JSON.stringify(reservation));
+
+        window.location.href = 'index2.html';
     });
 });

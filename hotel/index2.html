@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Reservas Realizadas</h1>
+        <table class="table table-bordered mt-4">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Data de Entrada</th>
+                    <th>Data de Saída</th>
+                    <th>Observações</th>
+                    <th>Adultos</th>
+                    <th>Crianças</th>
+                </tr>
+            </thead>
+            <tbody id="reservations-table-body">
+                <!-- As reservas serão inseridas aqui -->
+            </tbody>
+        </table>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const reservationsTableBody = document.getElementById('reservations-table-body');
+
+           
+            const reservation = JSON.parse(localStorage.getItem('reservation'));
+
+            if (reservation) {
+              
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${reservation.name}</td>
+                    <td>${reservation.email}</td>
+                    <td>${reservation.checkIn}</td>
+                    <td>${reservation.checkOut}</td>
+                    <td>${reservation.observations}</td>
+                    <td>${reservation.adults}</td>
+                    <td>${reservation.children}</td>
+                `;
+                reservationsTableBody.appendChild(row);
+
+                localStorage.removeItem('reservation');
+            }
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
